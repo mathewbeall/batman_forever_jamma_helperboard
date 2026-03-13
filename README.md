@@ -61,6 +61,19 @@ reference/         Derick2k's original design files (2020) for reference
 extras/            3D-printable test jigs and utilities
 ```
 
+## 3D-Printable Sound Board Mounting Kit
+
+The sound board mounts above the ST-V motherboard on standoffs, but the mounting holes don't align perfectly. The file `soundboard_mounting_kit.stl` contains a set of 3D-printable parts to bridge the gap:
+
+| Part | Description |
+|------|-------------|
+| **Shim A** | 6mm offset adapter (single axis), M3 countersunk |
+| **Shim B** | 6mm + 10mm offset adapter (two axes), M3 countersunk |
+| **Spacer C** | Plain 3mm M3 spacer for aligned holes |
+| **L-Bracket** | 25mm horizontal / 53mm vertical standoff for mounting points with no existing standoff |
+
+All parts are 3mm thick (except the L-bracket pillar). M3 hardware throughout. Print in PETG or PLA, no supports needed. The OpenSCAD source (`soundboard_mounting_kit.scad`) is included if you need to adjust offsets.
+
 ## Switch Settings
 
 ### SW4 — Audio Source
