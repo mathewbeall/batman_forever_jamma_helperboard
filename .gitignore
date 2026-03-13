@@ -3,5 +3,7 @@
 *_backup/
 *_BACKUP_*
 .claude/
+claude.md
+CLAUDE.md
 analysis/
 *.rtf
