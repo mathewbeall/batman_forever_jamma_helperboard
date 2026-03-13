@@ -80,7 +80,7 @@ The Batman Forever sound board outputs amplified stereo via a bridged (BTL) ampl
 
 SW4 (4PDT slide switch) handles this with direct BTL parallel summing: in Batman mode, L+ and R+ are tied together on Speaker+, and L- and R- are tied together on Speaker-. The speaker sees the sum of both channels across its terminals.
 
-No resistor summing network is needed because BTL amplifier outputs are current-limited and share the same power supply and ground reference, so they can be directly paralleled onto one speaker.
+**V1.1** connects the channels directly, which works in practice but is not ideal — gain mismatch between channels can cause one to fight the other. **V1.2** adds four 0.22 ohm 1W series resistors (R1–R4) on the speaker lines between J4 and SW4 as current-sharing ballast, following the same approach recommended in TI's amplifier application notes. The resistors are small enough relative to the 8 ohm speaker load (2.75%) that audio loss is negligible.
 
 In ST-V mode, SW4 simply passes the native JAMMA audio straight through to the cabinet.
 
