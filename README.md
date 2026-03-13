@@ -74,6 +74,18 @@ The sound board mounts above the ST-V motherboard on standoffs, but the mounting
 
 All parts are 3mm thick (except the L-bracket pillar). M3 hardware throughout. Print in PETG or PLA, no supports needed. The OpenSCAD source (`soundboard_mounting_kit.scad`) is included if you need to adjust offsets.
 
+## Stereo-to-Mono Downmixing
+
+The Batman Forever sound board outputs amplified stereo via a bridged (BTL) amplifier — four wires: L+, L-, R+, R-. JAMMA only has a single speaker output (Speaker+, Speaker-).
+
+SW4 (4PDT slide switch) handles this using the **Taito L+/R- method**: in Batman mode, L+ and R+ are tied together on Speaker+, and L- and R- are tied together on Speaker-. The speaker sees `(L+ + R+) - (L- + R-)` — a proper mono sum of both channels.
+
+No resistor summing network is needed because BTL amplifier outputs are current-limited and share the same power supply and ground reference, so they can be directly paralleled onto one speaker. This is the same technique Taito used in their stereo JAMMA boards.
+
+In ST-V mode, SW4 simply passes the native JAMMA audio straight through to the cabinet.
+
+The line-level audio path (RV1, RCA jacks, pin headers) is completely independent and always active regardless of SW4 position.
+
 ## Switch Settings
 
 ### SW4 — Audio Source
