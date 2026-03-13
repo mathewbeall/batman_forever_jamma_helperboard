@@ -78,9 +78,9 @@ All parts are 3mm thick (except the L-bracket pillar). M3 hardware throughout. P
 
 The Batman Forever sound board outputs amplified stereo via a bridged (BTL) amplifier — four wires: L+, L-, R+, R-. JAMMA only has a single speaker output (Speaker+, Speaker-).
 
-SW4 (4PDT slide switch) handles this using the **Taito L+/R- method**: in Batman mode, L+ and R+ are tied together on Speaker+, and L- and R- are tied together on Speaker-. The speaker sees `(L+ + R+) - (L- + R-)` — a proper mono sum of both channels.
+SW4 (4PDT slide switch) handles this with direct BTL parallel summing: in Batman mode, L+ and R+ are tied together on Speaker+, and L- and R- are tied together on Speaker-. The speaker sees the sum of both channels across its terminals.
 
-No resistor summing network is needed because BTL amplifier outputs are current-limited and share the same power supply and ground reference, so they can be directly paralleled onto one speaker. This is the same technique Taito used in their stereo JAMMA boards.
+No resistor summing network is needed because BTL amplifier outputs are current-limited and share the same power supply and ground reference, so they can be directly paralleled onto one speaker.
 
 In ST-V mode, SW4 simply passes the native JAMMA audio straight through to the cabinet.
 
