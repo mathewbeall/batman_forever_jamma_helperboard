@@ -16,6 +16,7 @@ This is a recreation and improvement of [Derick2k's original design](reference/d
 - **Full JAMMA passthrough** — Video, controls, coins, test, service all pass through untouched
 - **Power distribution** — Taps JAMMA 5V/12V/GND to power the sound board, fan headers, and voltmeter
 - **Audio switching** — Single 4PDT slide switch selects ST-V native audio or Batman sound board output
+- **Stereo-to-mono downmix** — Sound board's amplified stereo (BTL) output is summed to mono for the single JAMMA cabinet speaker
 - **Button remapping** — Two 4PDT slide switches shift P1/P2 button mapping (Batman uses buttons 2/3/4 instead of 1/2/3)
 - **Line-level audio** — Independent path with dual-gang volume pot, RCA jacks, and pin headers for external amplifiers
 - **Voltage monitoring** — Slide switch selects 5V or 12V rail for a 0.28" voltmeter display module
