@@ -164,3 +164,23 @@ See the [Cable Build Guide](cable-builds.md) for power cable and speaker cable p
 3. Power on — verify video and native audio pass through to the cabinet.
 4. Check voltmeter reads correct voltage for the selected rail.
 5. If passthrough works, power off, connect sound board cables, and test Batman mode.
+
+---
+
+## Mono Downmix Notes (Batman Mode)
+
+When the audio switch is set to Batman, the adapter sums the sound board's stereo BTL amplifier outputs to mono for the JAMMA cabinet speaker. This is the most demanding operating mode for the sound board's amplifiers.
+
+**Why V1.2 added ballast resistors (R1-R4):**
+
+When two BTL amplifier channels are paralleled for mono summing, small gain differences between the left and right channels cause cross-channel current — one amp tries to source current while the other sinks it. This wastes power as heat rather than driving the speaker. The 0.22 ohm ballast resistors limit this cross-channel current path.
+
+**Symptoms observed on V1.1 (no ballast resistors):**
+
+- **Cold-start oscillation** — Low-frequency feedback/motorboating when the sound board's heatsinks are cold. Clears after the amp warms up, as thermal drift brings channel gains closer together. Toggling the audio switch to ST-V and back also clears it.
+- **Elevated heatsink temperature** — In normal speaker mode (driving speakers directly), the sound board heatsinks are barely warm. In downmix mode without resistors, they get noticeably hot due to cross-channel current dissipation.
+- **More stable power rails** — The 12V and 5V rails fluctuate less in downmix mode compared to normal speaker mode, because the cross-channel current draw is more constant (amps fighting each other) vs. the dynamic current draw of actually driving speakers with audio signal.
+
+All three symptoms point to the same root cause: uncontrolled cross-channel current between paralleled BTL outputs. V1.2's ballast resistors address this.
+
+**Verification after V1.2 build:** Compare sound board heatsink temperature and 12V rail stability between ST-V mode and Batman mode. Heatsinks should run cooler and rails should be more stable than V1.1 in downmix mode.
