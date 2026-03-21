@@ -51,6 +51,7 @@
 | Voltmeter module | 1 | 0.28" 3-digit voltmeter module, 3-wire | Amazon (10-pack, $14) | [Amazon](https://www.amazon.com/dp/B0BG31FBX5) | $1.40 | $1.40 | Solder wires directly into header holes |
 | Volume pot | 1 | Alpha RV16A01F-41-15R1-A10K-30H4 dual-gang 10K audio taper pot, right-angle | Adafruit | [Adafruit #5272](https://www.adafruit.com/product/5272) | $2.75 | $2.75 | |
 | — | 1 | 40-pin IDE ribbon cable (Darksoft multi → sound board) | Amazon (2-pack, $15) | [Amazon](https://www.amazon.com/dp/B01IT4V7J6) | $7.50 | $7.50 | |
+| — | 1 | M3 bolt and nut (voltmeter mounting) | Any | — | — | — | |
 | | | | | | **Subtotal:** | **$18.55** | |
 
 ---

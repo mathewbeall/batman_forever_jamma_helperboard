@@ -114,14 +114,14 @@ Solder the two Molex KK 254 3-pos shrouded headers. Silkscreen reads "12V FANS".
 
 ### Step 12: Voltmeter Module
 
-Solder the voltmeter module's 3 wires directly into the header holes from the back of the board. No pin header needed.
-
+- **Flush-cut the long pins on the back of the voltmeter module** before mounting — they will interfere with the board otherwise.
+- Mount the module in the cutout area on the front of the board using M3 hardware (bolt and nut).
+- Solder the module's 3 wires directly into the header holes from the back of the board. No pin header needed.
 - Silkscreen reads "G 12V S" — match the wires from the voltmeter module:
   - G = black wire (GND)
   - 12V = red wire (power)
   - S = yellow wire (signal/measurement input)
-
-The module mounts in the cutout area on the front of the board. There is a small adjustment screw on the back of the module, reachable through the cutout, for calibrating the readout. Use a known-good multimeter to verify the voltage and adjust as needed.
+- There is a small adjustment screw on the back of the module, reachable through the cutout, for calibrating the readout. Use a known-good multimeter to verify the voltage and adjust as needed.
 
 ---
 
