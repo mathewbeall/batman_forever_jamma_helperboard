@@ -17,8 +17,8 @@
 | **Components subtotal** | **$33.15** |
 | Shipping estimate (10%) | $3.32 |
 | **Total per board (components + shipping)** | **$36.47** |
-| PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
-| **Grand total per assembled unit** | **$65.35** |
+| PCB cost ($681.27 total / 24 sellable boards) | $28.39 |
+| **Grand total per assembled unit** | **$64.86** |
 
 ---
 
@@ -142,8 +142,8 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 | **Components subtotal** | **$33.15** |
 | Shipping estimate (10%) | $3.32 |
 | **Total per board (components + shipping)** | **$36.47** |
-| PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
-| **Grand total per assembled unit** | **$65.35** |
+| PCB cost ($681.27 total / 24 sellable boards) | $28.39 |
+| **Grand total per assembled unit** | **$64.86** |
 
 ---
 
