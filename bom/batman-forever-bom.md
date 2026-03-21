@@ -1,5 +1,5 @@
 # Batman Forever JAMMA Adapter — Bill of Materials
-**Last Updated: 2026-03-15**
+**Last Updated: 2026-03-20**
 **All prices verified against vendor listings**
 
 ---
@@ -8,17 +8,17 @@
 
 | Category | Subtotal |
 |----------|----------|
-| DigiKey — PCB-mount components | $5.46 |
-| DigiKey — Cable parts | $7.50 |
+| DigiKey — PCB-mount components | $4.95 |
+| DigiKey — Cable parts | $6.15 |
 | Amazon/AliExpress — Switches, voltmeter, IDE cable | $13.11 |
 | Adafruit — Pot | $2.75 |
 | Memotronics — JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$34.50** |
-| Shipping estimate (10%) | $3.45 |
-| **Total per board (components + shipping)** | **$37.95** |
+| **Components subtotal** | **$33.15** |
+| Shipping estimate (10%) | $3.32 |
+| **Total per board (components + shipping)** | **$36.47** |
 | PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
-| **Grand total per assembled unit** | **$66.83** |
+| **Grand total per assembled unit** | **$65.35** |
 
 ---
 
@@ -60,17 +60,18 @@
 |-----|-------------|-----------|---------------|------|-------|-----|
 | 1 | KK .156" 4-pin crimp housing (adapter J4 end) | 0009503041 | WM2102-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0009503041/26457) | $0.17 | $0.17 |
 | 1 | KK .156" 5-pin crimp housing (sound board J6 end) | 0009503051 | WM2103-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0009503051/26459) | $0.22 | $0.22 |
-| 9 | KK .156" crimp terminals, 22-30 AWG | 0008500160 | WM16517-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0008500160/3071500) | $0.26 | $2.34 |
-| | | | | | **Subtotal:** | **$2.73** |
+| 9 | KK .156" crimp terminals, 18-24 AWG | 08-50-0106 | WM2300-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0850-0106/26477) | $0.11 | $0.99 |
+| | | | | | **Subtotal:** | **$1.38** |
 
 **J6 Pinout:** 1=Speaker L+, 2=Speaker L-, 3=Speaker R+, 4=KEY (NC), 5=Speaker R-
 **J4 on adapter:** 4-pin KK 396 receives pins 1,2,3,5 (skip pin 4 KEY)
+**Speaker wire:** 18 AWG — uses same WM2300-ND crimp terminals as power cable.
 
 ---
 
 ## DigiKey — KK 254 Cable Parts (J9/J10 Line In/Out)
 
-J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker cables. J14/J15 fan cables not needed (fans come with hardwired connectors).
+J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker cables. J14/J15 fan cables not needed (fans come with hardwired connectors). This is the only cable using WM16517-ND (22-30 AWG) crimp terminals.
 
 | Qty | Description | Mfr Part # | DigiKey Part # | Link | Price | Ext |
 |-----|-------------|-----------|---------------|------|-------|-----|
@@ -80,11 +81,11 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 
 ---
 
-## DigiKey Total: $12.45
+## DigiKey Total: $11.10
 
-(PCB-mount: $4.95 + Power cable: $2.27 + Speaker cable: $2.73 + KK 254 cable: $2.50)
+(PCB-mount: $4.95 + Power cable: $2.27 + Speaker cable: $1.38 + KK 254 cable: $2.50)
 
-**⚠️ Buy extra crimp terminals** — budget 50% spares for crimp mistakes. Add ~$2.20 to terminal costs.
+**⚠️ Buy extra crimp terminals** — budget 10-15% spares for crimp mistakes.
 
 **⚠️ Crimp tool required** for Molex KK terminals — or carefully solder them.
 
@@ -123,7 +124,7 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 | Qty | Description | Source | Per-Board | Notes |
 |-----|-------------|--------|-----------|-------|
 | ~3 ft | 18-20 AWG stranded (red, black, yellow) — power cable | [Amazon](https://www.amazon.com/) | ~$1.75 | From 25ft spool set ($27.50/set) |
-| ~3 ft | 22 AWG stranded (4 colors) — speaker cable | [Amazon](https://www.amazon.com/) | ~$1.75 | From 25ft spool set ($27.50/set) |
+| ~3 ft | 18-20 AWG stranded (4 colors) — speaker cable | [Amazon](https://www.amazon.com/) | ~$1.75 | From 25ft spool set ($27.50/set) |
 | | | | **Subtotal: ~$3.50** | |
 
 ---
@@ -133,16 +134,16 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 | Category | Cost |
 |----------|------|
 | DigiKey — PCB-mount headers/jacks/resistors | $4.95 |
-| DigiKey — Cable housings & terminals | $7.50 |
+| DigiKey — Cable housings & terminals | $6.15 |
 | Amazon/AliExpress — Switches, voltmeter, IDE cable | $13.11 |
 | Adafruit — RV1 pot | $2.75 |
 | Memotronics — CN2 JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$34.50** |
-| Shipping estimate (10%) | $3.45 |
-| **Total per board (components + shipping)** | **$37.95** |
+| **Components subtotal** | **$33.15** |
+| Shipping estimate (10%) | $3.32 |
+| **Total per board (components + shipping)** | **$36.47** |
 | PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
-| **Grand total per assembled unit** | **$66.83** |
+| **Grand total per assembled unit** | **$65.35** |
 
 ---
 
