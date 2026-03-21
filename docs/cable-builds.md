@@ -58,6 +58,18 @@ Use 22 AWG stranded wire.
 
 These connect the sound board's RCA line-level outputs to the adapter's INPUT header, and the adapter's OUTPUT header to an external amplifier (via RCA jacks or direct).
 
+### Sound Board RCA Jacks
+
+| Jack | Color | Function |
+|------|-------|----------|
+| J14 | Red | Line-level output — Right |
+| J13 | White | Line-level output — Left |
+| J11 | Red | Mix-in input — Right |
+| J10 | White | Mix-in input — Left |
+| — | Black | Combined mono output |
+
+Connect J14 (red) and J13 (white) to the adapter's INPUT header.
+
 ### Parts
 
 | Qty | Description | DigiKey PN |
