@@ -1,7 +1,7 @@
 # Bill of Materials
 
 **All prices verified 2026-03-20**
-**Estimated total cost per assembled unit: ~$67.30** (including PCB, amortized across V1.1 + V1.2 runs)
+**Estimated total cost per assembled unit: ~$66.83** (including PCB, amortized across V1.1 + V1.2 runs)
 
 ---
 
@@ -9,17 +9,17 @@
 
 | Category | Cost |
 |----------|------|
-| DigiKey — PCB-mount headers/jacks/resistors | $5.38 |
+| DigiKey — PCB-mount headers/jacks/resistors | $4.95 |
 | DigiKey — Cable housings & terminals | $7.50 |
 | Amazon/AliExpress — Switches, voltmeter, IDE cable | $13.11 |
 | Adafruit — RV1 pot | $2.75 |
 | Memotronics — CN2 JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$34.93** |
-| Shipping estimate (10%) | $3.49 |
-| **Total per board (components + shipping)** | **$38.42** |
+| **Components subtotal** | **$34.50** |
+| Shipping estimate (10%) | $3.45 |
+| **Total per board (components + shipping)** | **$37.95** |
 | PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
-| **Grand total per assembled unit** | **$67.30** |
+| **Grand total per assembled unit** | **$66.83** |
 
 ---
 
@@ -34,11 +34,8 @@
 | INPUT header | 1 | Molex KK 254 header, 4-pos, vertical, shrouded | 22-23-2041 | WM4202-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232041/26671) | $0.26 | $0.26 |
 | OUTPUT header | 1 | Molex KK 254 header, 4-pos, vertical, shrouded | 22-23-2041 | WM4202-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232041/26671) | $0.26 | $0.26 |
 | 12V FANS header (×2) | 2 | Molex KK 254 header, 3-pos, vertical, shrouded | 22-23-2031 | WM4201-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232031/26669) | $0.22 | $0.44 |
-| Voltmeter header (G 12V S) | 1 | 1x40 breakaway pin header, 2.54mm (cut 1x3) | PREC040SAAN-RC | S1012EC-40-ND | [DigiKey](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PREC040SAAN-RC/2774814) | $0.43 | $0.43 |
 | Audio ballast resistors (×4) | 4 | 0.22 ohm 1W 5% axial resistor, metal film | RR01JR22TB | A131610CT-ND | [DigiKey](https://www.digikey.com/en/products/detail/te-connectivity-passive-product/RR01JR22TB/2384744) | $0.13 | $0.52 |
-| | | | | | | **Subtotal:** | **$5.38** |
-
-**Voltmeter note:** Cut 3 pins from the 1x40 breakaway strip. Or solder voltmeter wires directly — no header needed.
+| | | | | | | **Subtotal:** | **$4.95** |
 
 **Note:** All Molex headers are dedicated parts (not cut from breakaway strips).
 

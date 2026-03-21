@@ -14,11 +14,11 @@
 | Adafruit — Pot | $2.75 |
 | Memotronics — JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$34.93** |
-| Shipping estimate (10%) | $3.49 |
-| **Total per board (components + shipping)** | **$38.42** |
+| **Components subtotal** | **$34.50** |
+| Shipping estimate (10%) | $3.45 |
+| **Total per board (components + shipping)** | **$37.95** |
 | PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
-| **Grand total per assembled unit** | **$67.30** |
+| **Grand total per assembled unit** | **$66.83** |
 
 ---
 
@@ -34,13 +34,10 @@
 | J10 | 1 | Molex KK 254, 4-pos, vertical, shrouded (line out) | 22-23-2041 | WM4202-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232041/26671) | $0.26 | $0.26 |
 | J14 | 1 | Molex KK 254, 3-pos, vertical, shrouded (fan) | 22-23-2031 | WM4201-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232031/26669) | $0.22 | $0.22 |
 | J15 | 1 | Molex KK 254, 3-pos, vertical, shrouded (fan) | 22-23-2031 | WM4201-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232031/26669) | $0.22 | $0.22 |
-| J16 | 1 | 1×40 breakaway pin header, 2.54mm (cut 1×3) | PREC040SAAN-RC | S1012EC-40-ND | [DigiKey](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PREC040SAAN-RC/2774814) | $0.43 | $0.43 |
 | R1-R4 | 4 | 0.22 ohm 1W 5% axial resistor, metal film (V1.2 audio ballast) | RR01JR22TB | A131610CT-ND | [DigiKey](https://www.digikey.com/en/products/detail/te-connectivity-passive-product/RR01JR22TB/2384744) | $0.13 | $0.52 |
-| | | | | | | **Subtotal:** | **$5.38** |
+| | | | | | | **Subtotal:** | **$4.95** |
 
-**Cut list for breakaway strip:** 1× 3-pin (J16 — voltmeter). Plenty of spares.
-
-**Note:** J3, J4, J9, J10, J14, J15 are dedicated Molex headers (not cut from breakaway strips).
+**Note:** J3, J4, J9, J10, J14, J15 are dedicated Molex headers (not cut from breakaway strips). Voltmeter wires solder directly to pads — no header needed.
 
 ---
 
@@ -83,9 +80,9 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 
 ---
 
-## DigiKey Total: $12.88
+## DigiKey Total: $12.45
 
-(PCB-mount: $5.38 + Power cable: $2.27 + Speaker cable: $2.73 + KK 254 cable: $2.50)
+(PCB-mount: $4.95 + Power cable: $2.27 + Speaker cable: $2.73 + KK 254 cable: $2.50)
 
 **⚠️ Buy extra crimp terminals** — budget 50% spares for crimp mistakes. Add ~$2.20 to terminal costs.
 
@@ -135,17 +132,17 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 
 | Category | Cost |
 |----------|------|
-| DigiKey — PCB-mount headers/jacks/resistors | $5.38 |
+| DigiKey — PCB-mount headers/jacks/resistors | $4.95 |
 | DigiKey — Cable housings & terminals | $7.50 |
 | Amazon/AliExpress — Switches, voltmeter, IDE cable | $13.11 |
 | Adafruit — RV1 pot | $2.75 |
 | Memotronics — CN2 JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$34.93** |
-| Shipping estimate (10%) | $3.49 |
-| **Total per board (components + shipping)** | **$38.42** |
+| **Components subtotal** | **$34.50** |
+| Shipping estimate (10%) | $3.45 |
+| **Total per board (components + shipping)** | **$37.95** |
 | PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
-| **Grand total per assembled unit** | **$67.30** |
+| **Grand total per assembled unit** | **$66.83** |
 
 ---
 
