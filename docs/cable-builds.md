@@ -1,19 +1,11 @@
 # Cable Build Guide
 
-This board requires two cables to connect to the Mitsurugi-w Batman Forever sound board repro.
+## Power Cable (Power Header → Sound Board J1)
 
-**Before powering on any cable, verify with a multimeter that there are no shorts between +5V, +12V, and GND at both connector ends.**
+6-pin on the adapter side, 7-pin on the sound board side (pin 5 is the key — leave empty).
 
----
-
-## Power Cable (Adapter J3 → Sound Board J1)
-
-Connects the adapter's 6-pin J3 header to the sound board's 7-pin J1 power connector. This is a straight 1:1 cable with no splices — pin 5 (KEY) on the sound board side is left empty.
-
-### Pinout
-
-| Adapter J3 Pin | Signal | Wire Color | → | Sound Board J1 Pin | Signal |
-|----------------|--------|------------|---|-------------------|--------|
+| Adapter Pin | Signal | Wire Color | → | Sound Board J1 Pin | Signal |
+|-------------|--------|------------|---|-------------------|--------|
 | 1 | GND | Black | → | 3 | GND |
 | 2 | GND | Black | → | 4 | GND |
 | 3 | GND | Black | → | 7 | GND |
@@ -22,62 +14,64 @@ Connects the adapter's 6-pin J3 header to the sound board's 7-pin J1 power conne
 | 6 | +12V | Yellow | → | 2 | +12V |
 | — | — | — | — | 5 (KEY) | Empty |
 
-J3 pin 1 is on the LEFT when viewing the board from the front (component side facing you).
+Silkscreen on the adapter reads "G G G 5V 12V" (left to right, pin 1 on the left when viewing from the front).
 
 ### Parts
 
-- **Wire:** 18-20 AWG stranded, ~6-8 inches per conductor
-- **Adapter end:** Molex KK 396 6-pin housing (0009503061 / WM2104-ND)
-- **Sound board end:** Molex KK 396 7-pin housing (0009503071 / WM2105-ND)
-- **Terminals:** 08-50-0106 (WM2300-ND) — rated 18-24 AWG
+| Qty | Description | DigiKey PN |
+|-----|-------------|-----------|
+| 1 | KK .156" 6-pin crimp housing (adapter end) | WM2104-ND |
+| 1 | KK .156" 7-pin crimp housing (sound board end) | WM2105-ND |
+| 12+ | KK .156" crimp terminal, **18-24 AWG** | WM2300-ND |
 
-### Safety Warning
-
-**DO NOT use 08-50-0114 (WM1114-ND) crimp terminals for this cable.** Those are rated 22-30 AWG only and cannot properly crimp 18 AWG power wire. Use 08-50-0106 (WM2300-ND) which is rated for 18-24 AWG.
+Use 18 AWG stranded wire. **Do NOT use WM1114-ND terminals — they are 22-30 AWG only and cannot crimp 18 AWG wire.**
 
 ---
 
-## Speaker Cable (Sound Board J6 → Adapter J4)
+## Speaker Cable (Speaker Header → Sound Board J6)
 
-Connects the sound board's 5-pin J6 speaker output to the adapter's 4-pin J4 speaker input. Pin 4 (KEY) on the sound board side is skipped.
+4-pin on the adapter side, 5-pin on the sound board side (pin 4 is the key — leave empty).
 
-### Pinout
+| Sound Board J6 Pin | Signal | → | Adapter Pin |
+|--------------------|--------|---|-------------|
+| 1 | Speaker L+ | → | 1 |
+| 2 | Speaker L- | → | 2 |
+| 3 | Speaker R+ | → | 3 |
+| 4 | KEY (NC) | — | skip |
+| 5 | Speaker R- | → | 4 |
 
-| Sound Board J6 Pin | Signal | Wire Color | → | Adapter J4 Pin |
-|--------------------|--------|------------|---|---------------|
-| 1 | Speaker L+ | Brown | → | 1 |
-| 2 | Speaker L- | Gray | → | 2 |
-| 3 | Speaker R+ | Violet | → | 3 |
-| 4 | KEY (NC) | — | → | skip |
-| 5 | Speaker R- | Gray | → | 4 |
+Silkscreen on the adapter reads "+ L - + R -".
 
 ### Parts
 
-- **Wire:** 22 AWG stranded, ~6-8 inches per conductor
-- **Adapter end:** Molex KK 396 4-pin housing (0009503041 / WM2102-ND)
-- **Sound board end:** Molex KK 396 5-pin housing (0009503051 / WM2103-ND)
-- **Terminals:** 0008500160 (WM16517-ND) — rated 22-30 AWG
+| Qty | Description | DigiKey PN |
+|-----|-------------|-----------|
+| 1 | KK .156" 4-pin crimp housing (adapter end) | WM2102-ND |
+| 1 | KK .156" 5-pin crimp housing (sound board end) | WM2103-ND |
+| 9+ | KK .156" crimp terminal, **22-30 AWG** | WM16517-ND |
+
+Use 22 AWG stranded wire.
 
 ---
 
-## Voltmeter Wiring (J16)
+## Line-Level Audio Cables (INPUT / OUTPUT Headers)
 
-The voltmeter module connects to J16 with 3 wires:
+These connect the sound board's RCA line-level outputs to the adapter's INPUT header, and the adapter's OUTPUT header to an external amplifier (via RCA jacks or direct).
 
-| J16 Pin | Wire | Signal |
-|---------|------|--------|
-| 1 | Yellow | Measurement input (from SW3 common) |
-| 2 | Red | VCC (+12V always) |
-| 3 | Black | GND |
+### Parts
 
-The voltmeter module itself always runs on 12V. SW3 selects whether pin 1 measures the 5V or 12V rail.
+| Qty | Description | DigiKey PN |
+|-----|-------------|-----------|
+| 2 | KK 254 4-pin crimp housing, no lock | WM1577-ND |
+| 8+ | KK 254 crimp terminal, 22-30 AWG | WM16517-ND |
+
+Use 22 AWG stranded wire.
 
 ---
 
-## Crimp Terminal Quick Reference
+## Safety
 
-| Cable | Wire Gauge | Correct Terminal | DigiKey PN |
-|-------|-----------|-----------------|------------|
-| Power (J3→J1) | 18 AWG | Molex 08-50-0106 | WM2300-ND |
-| Speaker (J6→J4) | 22 AWG | Molex 0008500160 | WM16517-ND |
-| Line in/out (J9/J10) | 22 AWG | Molex 0008500113 | WM1114CT-ND |
+- **Always verify no shorts between +5V, +12V, and GND at both connector ends before powering on.**
+- Double-check pin 5 (KEY) on the sound board housings is left empty.
+- Budget 50% extra crimp terminals for mistakes.
+- A proper Molex crimp tool is recommended. Crimping with pliers works but is less reliable.

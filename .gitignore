@@ -1,9 +1,44 @@
 .DS_Store
 *.bak
-*_backup/
-*_BACKUP_*
+*.rtf
+
+# Claude Code / local config
 .claude/
 claude.md
 CLAUDE.md
+
+# Playwright MCP browser logs
+.playwright-mcp/
+
+# EasyEDA backups and old designs
+*_backup/
+*_BACKUP_*
+*_BASELINE.eprj
+*1GND_Plane*.eprj
+*.kicad_sch
+
+# Web scraping snapshots
+snapshot*.md
+digikey-snap*.md
+digikey-part*.md
+j4_snapshot.md
+
+# Screenshots and working images
+Screenshot *.png
+initial design.png
+
+# Forum/research dumps
+batman_forever_sound_pcb_thread.txt
+
+# Old/superseded docs
+engineering-spec-v6.2.md
+production-punch-list.md
 analysis/
-*.rtf
+
+# Obsolete 3D files (replaced by soundboard_mounting_kit)
+standoff_bracket.*
+standoff_shims.*
+sw4_test_jig.*
+
+# Internal pricing data
+bom/price-baseline.json
