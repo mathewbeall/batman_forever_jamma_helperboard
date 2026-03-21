@@ -1,7 +1,7 @@
 # Bill of Materials
 
-**All prices verified 2026-03-12**
-**Estimated total cost per assembled unit: ~$52.50** (including PCB)
+**All prices verified 2026-03-20**
+**Estimated total cost per assembled unit: ~$67.30** (including PCB, amortized across V1.1 + V1.2 runs)
 
 ---
 
@@ -9,17 +9,17 @@
 
 | Category | Cost |
 |----------|------|
-| DigiKey — PCB-mount headers/jacks | $4.90 |
-| DigiKey — Cable housings & terminals | $5.82 |
+| DigiKey — PCB-mount headers/jacks/resistors | $5.38 |
+| DigiKey — Cable housings & terminals | $7.50 |
 | Amazon/AliExpress — Switches, voltmeter, IDE cable | $13.11 |
 | Adafruit — RV1 pot | $2.75 |
 | Memotronics — CN2 JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$32.77** |
-| Shipping estimate (10%) | $3.28 |
-| **Total per board (components + shipping)** | **$36.05** |
-| PCB cost ($329 / 20 boards) | $16.45 |
-| **Grand total per assembled unit** | **$52.50** |
+| **Components subtotal** | **$34.93** |
+| Shipping estimate (10%) | $3.49 |
+| **Total per board (components + shipping)** | **$38.42** |
+| PCB cost ($664.28 total / 23 sellable boards) | $28.88 |
+| **Grand total per assembled unit** | **$67.30** |
 
 ---
 
@@ -36,7 +36,8 @@
 | J14 | 1 | Molex KK 254 header, 3-pos, vertical, shrouded (fan) | 22-23-2031 | WM4201-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232031/26669) | $0.22 | $0.22 |
 | J15 | 1 | Molex KK 254 header, 3-pos, vertical, shrouded (fan) | 22-23-2031 | WM4201-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022232031/26669) | $0.22 | $0.22 |
 | J16 | 1 | 1x40 breakaway pin header, 2.54mm (cut 1x3) | PREC040SAAN-RC | S1012EC-40-ND | [DigiKey](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PREC040SAAN-RC/2774814) | $0.43 | $0.43 |
-| | | | | | | **Subtotal:** | **$4.90** |
+| R1-R4 | 4 | 0.22 ohm 1W 5% axial resistor, metal film (audio ballast) | RR01JR22TB | A131610CT-ND | [DigiKey](https://www.digikey.com/en/products/detail/te-connectivity-passive-product/RR01JR22TB/2384744) | $0.13 | $0.52 |
+| | | | | | | **Subtotal:** | **$5.38** |
 
 **J16 note:** Cut 3 pins from the 1x40 breakaway strip. Plenty of spares.
 
@@ -83,8 +84,8 @@
 | Qty | Description | Part Number | DigiKey PN | Link | Price | Ext |
 |-----|-------------|-------------|-----------|------|-------|-----|
 | 2 | KK 254 4-pin crimp housing, no lock | 22-01-2041 | WM1577-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0022012041/1090455) | $0.21 | $0.42 |
-| 8 | KK 254 crimp terminal, 22-30 AWG | 0008500113 | WM1114CT-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0008500113/304071) | $0.05 | $0.40 |
-| | | | | | **Subtotal:** | **$0.82** |
+| 8 | KK 254 crimp terminal, 22-30 AWG | 0008500160 | WM16517-ND | [DigiKey](https://www.digikey.com/en/products/detail/molex/0008500160/3071500) | $0.26 | $2.08 |
+| | | | | | **Subtotal:** | **$2.50** |
 
 ### Wire
 

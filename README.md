@@ -4,7 +4,7 @@ A JAMMA edge adapter board for the **Sega ST-V** arcade platform that enables th
 
 This is a recreation and improvement of [Derick2k's original design](reference/derick2k_final_render.png) from the arcade-projects.com forum, which was abandoned ~2 years ago and never released.
 
-> **Status:** V1.1 production boards ordered from JLCPCB (March 2026). Awaiting delivery and final validation.
+> **Status:** V1.2 production boards ordered from JLCPCB (March 2026). V1.1 tested and validated. V1.2 adds audio ballast resistors.
 
 <!-- TODO: Add board photo here once production boards arrive -->
 <!-- ![Board Photo](docs/images/board_top.png) -->
@@ -21,7 +21,7 @@ This is a recreation and improvement of [Derick2k's original design](reference/d
 - **Line-level audio** — Independent path with dual-gang volume pot, RCA jacks, and pin headers for external amplifiers
 - **Voltage monitoring** — Slide switch selects 5V or 12V rail for a 0.28" voltmeter display module
 - **Fan headers** — Two 3-pin fan connectors with 12V power
-- **All through-hole** — Zero SMD components, zero passives (no resistors or capacitors). Hand-solder friendly.
+- **All through-hole** — Zero SMD components. Four resistors (V1.2 audio ballast) are the only passives. Hand-solder friendly.
 
 ## Board Specifications
 

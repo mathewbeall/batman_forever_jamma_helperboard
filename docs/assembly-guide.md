@@ -1,141 +1,166 @@
-# Assembly Guide
+# Batman Forever JAMMA Adapter — Assembly Guide
+
+**Board Version:** V1.2
+**All components are through-hole. No SMD. Four resistors (R1-R4) are the only passives.**
+
+---
 
 ## Tools Required
 
-- Soldering iron (temperature-controlled recommended)
-- Solder (leaded or lead-free)
+- Soldering iron (adjustable temp recommended — 350-370°C for ground plane pins)
+- Solder (60/40 or 63/37 leaded recommended for through-hole)
 - Flush cutters
-- Multimeter (for continuity and voltage checks)
+- Needle-nose pliers
+- Crimp tool for Molex KK terminals (or solder carefully)
+
+---
 
 ## Before You Start
 
-All components are through-hole. There are no resistors, capacitors, or SMD parts on this board. Assembly is straightforward hand-soldering.
+- Inspect the bare PCB for manufacturing defects, especially the gold finger edge and via fills.
+- Gather all components and verify against the [Bill of Materials](bom.md).
+- Snip all 4 mounting lugs flush on each SS42H11-G9 switch (SW1, SW2, SW4) before soldering — they won't fit the footprint otherwise. Orientation does not matter — the switches are electrically symmetric.
 
 ---
 
-## Component Placement
+## Soldering Order
 
-### Top Side Components
+The order matters — some components block access to others if installed first. Follow this sequence.
 
-| Ref | Component | Notes |
-|-----|-----------|-------|
-| J3 | Molex KK 396, 6-pin (power) | Pin 1 marked on silkscreen |
-| J4 | Molex KK 396, 4-pin (speaker) | Pin 1 marked on silkscreen |
-| J9 | Molex KK 254, 4-pin (line input) | Keyed/shrouded header |
-| J10 | Molex KK 254, 4-pin (line output) | Keyed/shrouded header |
-| J14 | Molex KK 254, 3-pin (fan 1) | Keyed/shrouded header |
-| J15 | Molex KK 254, 3-pin (fan 2) | Keyed/shrouded header |
-| J16 | 1x3 pin header (voltmeter) | Cut from breakaway strip |
-| RV1 | Alpha RV16A01F dual-gang pot | Right-angle mount, 6 pins |
-| SW1 | SS42H11-G9 4PDT switch (P1 remap) | See switch prep below |
-| SW2 | SS42H11-G9 4PDT switch (P2 remap) | See switch prep below |
-| SW3 | SS-12D10L8 SPDT switch (voltmeter) | |
-| SW4 | SS42H11-G9 4PDT switch (audio) | See switch prep below |
-| CN2 | 56-pin JAMMA female connector | Soldered onto gold finger pads |
+### Step 1: JAMMA Female Connector
 
-### Bottom Side Components
+Solder this first while the board is empty and you have plenty of room to work.
 
-| Ref | Component | Notes |
-|-----|-----------|-------|
-| J7 | Kycon KLPX-0848A-2-R RCA jack (red, Left) | Mounts on BOTTOM layer |
-| J8 | Kycon KLPX-0848A-2-W RCA jack (white, Right) | Mounts on BOTTOM layer |
+- The 56-pin JAMMA female edge connector solders onto the gold finger pads on the top edge.
+- **Must be solder-pin type, NOT solder eyelet.**
+- Align carefully before tacking a few pins, then solder all 56.
 
-**After soldering J7/J8, flush-cut their pins on the top side** to prevent interference with RV1.
+### Step 2: Volume Pot
+
+Solder the Alpha RV16A01F dual-gang pot. The ground pins connect to heavy copper pours on multiple layers, so they will sink a lot of heat.
+
+- Apply extra heat and dwell time on the ground pins — they take noticeably longer to flow.
+- Verify the pot is seated flush to the board before soldering.
+- **Flush-cut all pins on the top side** — the RCA jacks mount directly behind this area and need clearance.
+
+### Step 3: RCA Jacks (Bottom Side)
+
+The Kycon KLPX-0848A-2 RCA jacks mount on the **bottom** of the board (solder from the top). There is not a lot of room to maneuver around the volume pot, which is why it gets soldered and trimmed first. Silkscreen on the bottom reads "RCA Output" with "L" and "R" labels.
+
+- Red jack = Left audio (labeled "L" on bottom silk)
+- White jack = Right audio (labeled "R" on bottom silk)
+- Snip the small plastic alignment lugs off the bottom of each jack before inserting — they won't clear the board otherwise.
+- Apply extra heat — ground pins connect to copper pours.
+- Verify jacks are seated flat against the bottom of the board before soldering.
+
+### Step 4: Line In/Out Headers
+
+Solder the two Molex KK 254 4-pos shrouded headers. Silkscreen labels read "INPUT" and "OUTPUT" with pin labels "- R - L" and "L - R -".
+
+- INPUT header = line level input from sound board
+- OUTPUT header = line level output to external amp
+- Key tab orientation should match the silkscreen.
+
+### Step 5: Power Header
+
+Solder the Molex KK 396 6-pos header. Silkscreen pin labels read "G G G 5V 12V".
+
+- This is the power connector to the sound board — carries GND, +5V, and +12V.
+- Ensure fully seated before soldering.
+
+### Step 6: Speaker Header
+
+Solder the Molex KK 396 4-pos header. Silkscreen pin labels read "+ L - + R -".
+
+- Speaker input from the sound board.
+
+### Step 7: Audio Ballast Resistors (V1.2)
+
+Solder the four 0.22 ohm 1W axial resistors (TE RR01JR22TB) above and below the speaker header.
+
+- These are current-sharing ballast resistors for the BTL parallel mono summing circuit.
+- Resistor body is smaller than the footprint — bend leads to match 12.8mm pad spacing.
+- Orientation does not matter (resistors are not polarized).
+
+### Step 8: Audio Source Switch
+
+Solder the SS42H11-G9 4PDT slide switch. Silkscreen labels read "ST-V" and "Batman".
+
+- Confirm mounting lugs have been snipped flush. Orientation does not matter.
+- ST-V (up, toward keyed JAMMA edge) / Batman (down, away from keyed JAMMA edge).
+
+### Step 9: Button Remap Switches (P1/P2)
+
+Solder both SS42H11-G9 4PDT slide switches. Silkscreen reads "Button Remap" with "P1" and "P2" labels, and "Off" / "On" positions.
+
+- P1 = Player 1 remap
+- P2 = Player 2 remap
+- Orientation does not matter.
+- Off (up, toward keyed JAMMA edge) / On (down, away from keyed JAMMA edge).
+
+### Step 10: Voltmeter Select Switch
+
+Solder the SS-12D10 SPDT slide switch. Silkscreen reads "5V" next to it.
+
+- Selects between 5V and 12V rail display on the voltmeter.
+
+### Step 11: 12V Fan Headers
+
+Solder the two Molex KK 254 3-pos shrouded headers. Silkscreen reads "12V FANS".
+
+- Key tab should face the outside edge of the board (toward the board edge, not inward).
+- Pin 1 = GND, Pin 2 = +12V, Pin 3 = NC.
+- Standard 3-pin PC fan connectors plug in with the key on the outside.
+
+### Step 12: Voltmeter Module
+
+Solder the voltmeter module's 3 wires directly into the header holes from the back of the board. No pin header needed.
+
+- Silkscreen reads "G 12V S" — match the wires from the voltmeter module:
+  - G = black wire (GND)
+  - 12V = red wire (power)
+  - S = yellow wire (signal/measurement input)
+
+The module mounts in the cutout area on the front of the board. There is a small adjustment screw on the back of the module, reachable through the cutout, for calibrating the readout. Use a known-good multimeter to verify the voltage and adjust as needed.
 
 ---
 
-## Switch Preparation (SW1, SW2, SW4)
+## Post-Soldering Checks
 
-The SS42H11-G9 switches have 4 metal mounting lugs that extend from the corners of the body. **Snip all 4 lugs flush with the body using flush cutters before soldering.** The board does not have mounting holes for these lugs.
+Before powering on:
 
-The switches have 12 pins in a 2-row x 6-column grid at 3mm pitch. All pins should drop through the PCB holes cleanly. If they don't fit, verify you have the correct SS42H11-G9 part (some sellers ship similar but different switches).
-
-A 3D-printable fit test jig is included in the `extras/` directory if you want to verify fit before soldering.
+1. **Visual inspection** — Check all solder joints for bridges, cold joints, and missed pins.
+2. **Continuity check** — Verify no shorts between +5V, +12V, and GND at the power header.
+3. **Connector check** — Verify all shrouded headers have key tabs oriented correctly.
 
 ---
 
-## CN2 — JAMMA Female Connector
+## Cable Builds
 
-The 56-pin JAMMA female edge connector (CN2) is soldered onto the **top edge** gold finger pads. This connector mates with the ST-V board.
-
-**You must use a solder pin type connector, NOT a solder eyelet type.** The solder pin type has straight pins that go through the gold finger pads. The eyelet type will not work.
+See the [Cable Build Guide](cable-builds.md) for power cable and speaker cable pinouts, wire gauges, and crimping instructions.
 
 ---
 
 ## Switch Settings
 
-### SW4 — Audio Source Select
+| Switch | Up (toward keyed JAMMA edge) | Down (away from keyed JAMMA edge) |
+|--------|----------------------|-------------------|
+| Audio (ST-V / Batman) | ST-V (passthrough) | Batman (sound board) |
+| P1 Button Remap | Off (normal buttons) | On (Batman remap) |
+| P2 Button Remap | Off (normal buttons) | On (Batman remap) |
 
-| Position | Label | Function |
-|----------|-------|----------|
-| Slider up (toward JAMMA edge) | **ST-V** | Passes native ST-V JAMMA audio straight through to cabinet |
-| Slider down (toward tab) | **Batman** | Routes Batman sound board audio to cabinet speakers |
+| Voltmeter Switch | Left | Right |
+|-----------------|------|-------|
+| Rail Select | 5V | 12V |
 
-**All standard ST-V games:** Set to ST-V.
-**Batman Forever with sound board:** Set to Batman.
-
-### SW1 / SW2 — Button Remap (Player 1 / Player 2)
-
-| Position | Label | Function |
-|----------|-------|----------|
-| Slider up (toward JAMMA edge) | **Off** | Normal 1:1 button passthrough |
-| Slider down (toward tab) | **On** | Shifts buttons +1 for Batman Forever |
-
-Batman Forever maps its controls to buttons 2/3/4 instead of the standard 1/2/3. The remap switches shift the cabinet buttons so that cabinet button 1 maps to ST-V button 2, button 2 to button 3, etc.
-
-**All standard ST-V games:** Set both to Off.
-**Batman Forever:** Set both to On.
-
-### SW3 — Voltmeter Select
-
-| Position | Function |
-|----------|----------|
-| Left | Displays 5V rail on voltmeter |
-| Right | Displays 12V rail on voltmeter |
+**All switches should be in ST-V / Off position for initial power-on testing.**
 
 ---
 
-## Testing Procedure
+## Initial Power-On Test
 
-### Before First Power-On
-
-1. **Visual inspection** — Check all solder joints for bridges, especially on the dense gold finger pads
-2. **Continuity check** — Verify no shorts between:
-   - +5V and GND
-   - +12V and GND
-   - +5V and +12V
-3. **Cable check** — If power cable is connected, verify the same three checks at the cable connector ends
-
-### First Power-On
-
-1. Set SW4 to **ST-V** (audio passthrough)
-2. Set SW1/SW2 to **Off** (no button remap)
-3. Insert the bottom edge (CN1) into the cabinet JAMMA harness
-4. Insert the ST-V board into the top edge (CN2)
-5. Power on
-6. Verify video output — you should see the ST-V boot screen
-7. Verify audio — you should hear the ST-V boot sound through cabinet speakers
-8. Verify controls — test all buttons and joystick directions
-9. Check voltmeter reading if module is installed
-
-### Batman Forever Testing
-
-1. Connect the power cable from J3 to the sound board J1
-2. Connect the speaker cable from sound board J6 to J4
-3. Set SW4 to **Batman**
-4. Set SW1/SW2 to **On**
-5. Power on and verify Batman Forever audio plays through cabinet speakers
-6. Verify all 3 action buttons respond correctly
-
----
-
-## Troubleshooting
-
-| Symptom | Likely Cause |
-|---------|-------------|
-| No video | Check CN1/CN2 seating, verify JAMMA harness is good |
-| No audio in ST-V mode | Check SW4 is set to ST-V (slider up) |
-| No audio in Batman mode | Check SW4 set to Batman, verify speaker cable J6→J4, check power cable to sound board |
-| Buttons don't work | SW1/SW2 switches not installed (circuit is open without them). Install switches first. |
-| Wrong buttons in Batman | Check SW1/SW2 are set to On (slider down) |
-| Voltmeter blank | Check J16 wiring — pin 2 must be +12V, pin 3 must be GND |
+1. Set audio switch to ST-V, both button remap switches to Off.
+2. Insert board into JAMMA harness — do NOT connect the sound board yet.
+3. Power on — verify video and native audio pass through to the cabinet.
+4. Check voltmeter reads correct voltage for the selected rail.
+5. If passthrough works, power off, connect sound board cables, and test Batman mode.
