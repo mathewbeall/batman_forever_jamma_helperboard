@@ -49,7 +49,6 @@ The Kycon KLPX-0848A-2 RCA jacks mount on the **bottom** of the board (solder fr
 
 - Red jack = Left audio (labeled "L" on bottom silk)
 - White jack = Right audio (labeled "R" on bottom silk)
-- Snip the small plastic alignment lugs off the bottom of each jack before inserting — they won't clear the board otherwise.
 - Apply extra heat — ground pins connect to copper pours.
 - Verify jacks are seated flat against the bottom of the board before soldering.
 
