@@ -115,7 +115,7 @@ The line-level audio path (RV1, RCA jacks, pin headers) is completely independen
 
 ## Forum Thread
 
-[Wait List — Batman Forever Sound PCB Repro](https://www.arcade-projects.com/threads/wait-list-batman-forever-sound-pcb-repro.27304/)
+[Interest List — Helper Board for Mitsu's Repro Batman Forever Sound/Amp Board](https://www.arcade-projects.com/threads/interest-list-helper-board-for-mitsus-repro-batman-forever-sound-amp-board.36822/)
 
 ## License
 
