@@ -8,6 +8,7 @@ This is a recreation and improvement of Derick2k's original design from the arca
 
 ![Board top side](docs/images/board-top.jpeg)
 ![Board bottom side](docs/images/board-bottom.jpeg)
+![Installed with ST-V and sound board](docs/images/installed.jpeg)
 
 ---
 
