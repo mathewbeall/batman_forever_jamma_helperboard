@@ -6,6 +6,9 @@ This is a recreation and improvement of Derick2k's original design from the arca
 
 > **Status:** V1.2 production boards received. Fully tested and validated.
 
+![Board top side](docs/images/board-top.jpeg)
+![Board bottom side](docs/images/board-bottom.jpeg)
+
 ---
 
 ## Features
