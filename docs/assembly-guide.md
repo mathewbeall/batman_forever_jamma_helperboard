@@ -41,7 +41,7 @@ Solder the Alpha RV16A01F dual-gang pot. The ground pins connect to heavy copper
 
 - Apply extra heat and dwell time on the ground pins — they take noticeably longer to flow.
 - Verify the pot is seated flush to the board before soldering.
-- **Flush-cut all pins on the top side** — the RCA jacks mount directly behind this area and need clearance.
+- **Flush-cut all pins on the bottom side** — the RCA jacks mount directly behind this area and need clearance.
 
 ### Step 3: RCA Jacks (Bottom Side)
 
