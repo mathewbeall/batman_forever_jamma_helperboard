@@ -2,12 +2,9 @@
 
 A JAMMA edge adapter board for the **Sega ST-V** arcade platform that enables the [Mitsurugi-w Batman Forever sound board repro](https://www.arcade-projects.com/threads/wait-list-batman-forever-sound-pcb-repro.27304/) to work in generic JAMMA cabinets.
 
-This is a recreation and improvement of [Derick2k's original design](reference/derick2k_final_render.png) from the arcade-projects.com forum, which was abandoned ~2 years ago and never released.
+This is a recreation and improvement of Derick2k's original design from the arcade-projects.com forum (thread post #191), which was abandoned ~2 years ago and never released.
 
-> **Status:** V1.2 production boards ordered from JLCPCB (March 2026). V1.1 tested and validated. V1.2 adds audio ballast resistors.
-
-<!-- TODO: Add board photo here once production boards arrive -->
-<!-- ![Board Photo](docs/images/board_top.png) -->
+> **Status:** V1.2 production boards received. Fully tested and validated.
 
 ---
 
@@ -39,7 +36,7 @@ This is a recreation and improvement of [Derick2k's original design](reference/d
 ## Quick Start
 
 1. **Order PCBs** — See the [Ordering Guide](docs/ordering-guide.md) for JLCPCB settings
-2. **Order components** — See the [Bill of Materials](docs/bom.md) (~$35-50 per board)
+2. **Order components** — See the [Bill of Materials](docs/bom.md) (~$31 per board in components)
 3. **Build cables** — See the [Cable Build Guide](docs/cable-builds.md) for power and speaker cables
 4. **Assemble** — See the [Assembly Guide](docs/assembly-guide.md) for soldering and setup instructions
 5. **Install** — Set switches, plug into your cabinet, and play
@@ -56,10 +53,11 @@ This is a recreation and improvement of [Derick2k's original design](reference/d
 ## Repository Structure
 
 ```
-hardware/          EasyEDA Pro project file (.eprj) and Gerber files
-docs/              Assembly guide, cable builds, BOM, ordering guide
-reference/         Derick2k's original design files (2020) for reference
-extras/            3D-printable test jigs and utilities
+Batman_Forever_JAMMA_Adapter_V1.2.eprj   EasyEDA Pro project file (final design)
+Gerber_PCB2_2026-03-20.zip               Production Gerber files for JLCPCB
+docs/                                    Assembly guide, cable builds, BOM, ordering guide
+bom/                                     Detailed BOM with full vendor pricing
+soundboard_mounting_kit.scad/.stl        3D-printable mounting parts
 ```
 
 ## 3D-Printable Sound Board Mounting Kit

@@ -33,7 +33,14 @@ batman_forever_sound_pcb_thread.txt
 # Old/superseded docs
 engineering-spec-v6.2.md
 production-punch-list.md
+v1.2-audio-resistors.md
+specs/
 analysis/
+
+# Obsolete design versions
+Batman_Forever_JAMMA_Adapter_V1.0*.eprj
+Batman_Forever_JAMMA_Adapter_V1.1*.eprj
+Jamma_Adapter/
 
 # Obsolete 3D files (replaced by soundboard_mounting_kit)
 standoff_bracket.*

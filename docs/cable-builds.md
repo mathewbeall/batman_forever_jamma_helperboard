@@ -48,9 +48,9 @@ Silkscreen on the adapter reads "+ L - + R -".
 |-----|-------------|-----------|
 | 1 | KK .156" 4-pin crimp housing (adapter end) | WM2102-ND |
 | 1 | KK .156" 5-pin crimp housing (sound board end) | WM2103-ND |
-| 9+ | KK .156" crimp terminal, **22-30 AWG** | WM16517-ND |
+| 9+ | KK .156" crimp terminal, **18-24 AWG** | WM2300-ND |
 
-Use 22 AWG stranded wire.
+Use 18 AWG stranded wire. Same terminals as the power cable.
 
 ---
 

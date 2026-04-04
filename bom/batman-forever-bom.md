@@ -1,5 +1,5 @@
 # Batman Forever JAMMA Adapter — Bill of Materials
-**Last Updated: 2026-03-20**
+**Last Updated: 2026-03-22**
 **All prices verified against vendor listings**
 
 ---
@@ -10,15 +10,15 @@
 |----------|----------|
 | DigiKey — PCB-mount components | $4.95 |
 | DigiKey — Cable parts | $6.15 |
-| Amazon/AliExpress — Switches, voltmeter, IDE cable | $13.11 |
+| Amazon/AliExpress — Switches, voltmeter, IDE cable | $8.11 |
 | Adafruit — Pot | $2.75 |
 | Memotronics — JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$33.15** |
-| Shipping estimate (10%) | $3.32 |
-| **Total per board (components + shipping)** | **$36.47** |
+| **Components subtotal** | **$28.15** |
+| Shipping estimate (10%) | $2.82 |
+| **Total per board (components + shipping)** | **$30.97** |
 | PCB cost ($681.27 total / 24 sellable boards) | $28.39 |
-| **Grand total per assembled unit** | **$64.86** |
+| **Grand total per assembled unit** | **$59.36** |
 
 ---
 
@@ -98,8 +98,8 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 | SW1, SW2, SW4 | 3 | SS42H11-G9 4PDT slide switch, 12-pin | [AliExpress](https://www.aliexpress.us/item/2251801767074174.html) | $1.07 | $3.21 | Sold in 10-packs ($10.74). Snip 4 mounting lugs flush before soldering. |
 | SW3 | 1 | SS-12D10 SPDT slide switch, 3-pin | [Amazon](https://www.amazon.com/dp/B07QB8RVKT) | $1.00 | $1.00 | Sold in 10-packs ($10). |
 | — | 1 | 0.28" 3-digit voltmeter module, 3-wire | [Amazon](https://www.amazon.com/dp/B0BG31FBX5) | $1.40 | $1.40 | Sold in 10-packs ($14). Connects to J16. |
-| — | 1 | 40-pin IDE ribbon cable (Darksoft multi → sound board) | [Amazon](https://www.amazon.com/dp/B01IT4V7J6) | $7.50 | $7.50 | Sold in 2-packs ($15). |
-| | | | | **Subtotal:** | **$13.11** | |
+| — | 1 | 40-pin IDE ribbon cable (Darksoft multi → sound board) | [Amazon](https://www.amazon.com/dp/B07FZXK2D4) | $2.50 | $2.50 | Sold in 4-packs ($9.99). 30cm F/F IDC. |
+| | | | | **Subtotal:** | **$8.11** | |
 
 ---
 
@@ -135,15 +135,15 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 |----------|------|
 | DigiKey — PCB-mount headers/jacks/resistors | $4.95 |
 | DigiKey — Cable housings & terminals | $6.15 |
-| Amazon/AliExpress — Switches, voltmeter, IDE cable | $13.11 |
+| Amazon/AliExpress — Switches, voltmeter, IDE cable | $8.11 |
 | Adafruit — RV1 pot | $2.75 |
 | Memotronics — CN2 JAMMA connector | $2.69 |
 | Wire (estimated per board) | $3.50 |
-| **Components subtotal** | **$33.15** |
-| Shipping estimate (10%) | $3.32 |
-| **Total per board (components + shipping)** | **$36.47** |
+| **Components subtotal** | **$28.15** |
+| Shipping estimate (10%) | $2.82 |
+| **Total per board (components + shipping)** | **$30.97** |
 | PCB cost ($681.27 total / 24 sellable boards) | $28.39 |
-| **Grand total per assembled unit** | **$64.86** |
+| **Grand total per assembled unit** | **$59.36** |
 
 ---
 
