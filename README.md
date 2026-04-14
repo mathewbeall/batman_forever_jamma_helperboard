@@ -89,10 +89,9 @@ The SSSU042100 is electrically pin-compatible with the SS42H11-G9 — same 4PDT 
 | File | Description |
 |------|-------------|
 | [v1.3/Batman_Forever_JAMMA_Adapter_V1.3.eprj](v1.3/Batman_Forever_JAMMA_Adapter_V1.3.eprj) | EasyEDA Pro project file |
+| [v1.3/Gerber_PCB2_2026-04-13.zip](v1.3/Gerber_PCB2_2026-04-13.zip) | Gerbers for JLCPCB (not yet ordered) |
 | [v1.3/assembly-guide.md](v1.3/assembly-guide.md) | Assembly guide |
 | [v1.3/bom.md](v1.3/bom.md) | Bill of materials with full pricing |
-
-Gerbers have not been generated for V1.3 yet.
 
 ---
 
@@ -116,6 +115,7 @@ v1.2/                                    V1.2 — tested production version
 
 v1.3/                                    V1.3 — design complete, NOT TESTED
   Batman_Forever_JAMMA_Adapter_V1.3.eprj   EasyEDA Pro project file
+  Gerber_PCB2_2026-04-13.zip               Gerbers for JLCPCB (not yet ordered)
   assembly-guide.md                        Assembly guide
   bom.md                                   Bill of materials
 
