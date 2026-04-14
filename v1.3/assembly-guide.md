@@ -19,7 +19,7 @@
 ## Before You Start
 
 - Inspect the bare PCB for manufacturing defects, especially the gold finger edge and via fills.
-- Gather all components and verify against the [Bill of Materials](../bom/batman-forever-bom-v1.3.md).
+- Gather all components and verify against the [Bill of Materials](bom.md).
 - **No switch prep needed** — the SSSU042100 uses metal snap-in retention clips that seat into dedicated PCB holes. Just press the switch in until the clips snap through, then solder the 12 signal pins. Orientation does not matter — the switches are electrically symmetric.
 
 ---
@@ -138,7 +138,7 @@ Before powering on:
 
 ## Cable Builds
 
-See the [Cable Build Guide](cable-builds.md) for power cable and speaker cable pinouts, wire gauges, and crimping instructions.
+See the [Cable Build Guide](../docs/cable-builds.md) for power cable and speaker cable pinouts, wire gauges, and crimping instructions.
 
 ---
 

@@ -136,7 +136,7 @@ Before powering on:
 
 ## Cable Builds
 
-See the [Cable Build Guide](cable-builds.md) for power cable and speaker cable pinouts, wire gauges, and crimping instructions.
+See the [Cable Build Guide](../docs/cable-builds.md) for power cable and speaker cable pinouts, wire gauges, and crimping instructions.
 
 ---
 

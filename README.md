@@ -4,7 +4,8 @@ A JAMMA edge adapter board for the **Sega ST-V** arcade platform that enables th
 
 This is a recreation and improvement of Derick2k's original design from the arcade-projects.com forum (thread post #191), which was abandoned ~2 years ago and never released.
 
-> **Status:** V1.2 production boards received. Fully tested and validated.
+> **Current production version: V1.2** — Fully tested and validated.
+> **V1.3** — Design complete, not yet ordered or tested. See [V1.3 changes](#v13-changes-untested) below.
 
 ![Board top side](docs/images/board-top.jpeg)
 ![Board bottom side](docs/images/board-bottom.jpeg)
@@ -22,7 +23,7 @@ This is a recreation and improvement of Derick2k's original design from the arca
 - **Line-level audio** — Independent path with dual-gang volume pot, RCA jacks, and pin headers for external amplifiers
 - **Voltage monitoring** — Slide switch selects 5V or 12V rail for a 0.28" voltmeter display module
 - **Fan headers** — Two 3-pin fan connectors with 12V power
-- **All through-hole** — Zero SMD components. Four resistors (V1.2 audio ballast) are the only passives. Hand-solder friendly.
+- **All through-hole** — Zero SMD components. Four resistors (audio ballast) are the only passives. Hand-solder friendly.
 
 ## Board Specifications
 
@@ -37,32 +38,96 @@ This is a recreation and improvement of Derick2k's original design from the arca
 | Thickness | 1.6mm |
 | Design Tool | EasyEDA Pro (JLCEDA Pro) |
 
-## Quick Start
+---
+
+## V1.2 — Production Version (Tested)
+
+V1.2 is the current production version. Boards have been ordered, received, and fully validated.
+
+**Quick Start (V1.2):**
 
 1. **Order PCBs** — See the [Ordering Guide](docs/ordering-guide.md) for JLCPCB settings
-2. **Order components** — See the [Bill of Materials](docs/bom.md) (~$31 per board in components)
+2. **Order components** — See the [Bill of Materials](v1.2/bom.md) (~$32 per board in components)
 3. **Build cables** — See the [Cable Build Guide](docs/cable-builds.md) for power and speaker cables
-4. **Assemble** — See the [Assembly Guide](docs/assembly-guide.md) for soldering and setup instructions
+4. **Assemble** — See the [Assembly Guide](v1.2/assembly-guide.md) for soldering and setup instructions
 5. **Install** — Set switches, plug into your cabinet, and play
 
-## Documentation
+**V1.2 Files:**
+
+| File | Description |
+|------|-------------|
+| [v1.2/Batman_Forever_JAMMA_Adapter_V1.2.eprj](v1.2/Batman_Forever_JAMMA_Adapter_V1.2.eprj) | EasyEDA Pro project file |
+| [v1.2/Gerber_PCB2_2026-03-20.zip](v1.2/Gerber_PCB2_2026-03-20.zip) | Production Gerbers for JLCPCB (tested) |
+| [v1.2/assembly-guide.md](v1.2/assembly-guide.md) | Assembly guide |
+| [v1.2/bom.md](v1.2/bom.md) | Bill of materials with full pricing |
+
+**V1.2 switch note:** SW1/SW2/SW4 use the SS42H11-G9 4PDT slide switch (AliExpress). Before soldering, snip all 4 mounting lugs flush on each switch.
+
+---
+
+## V1.3 Changes (Untested)
+
+> **V1.3 has not been ordered or tested.** The design is complete but unvalidated. Use V1.2 for production builds.
+
+V1.3 replaces the three 4PDT slide switches (SW1/SW2/SW4) with the **Alps Alpine SSSU042100**, available from Mouser Electronics. The motivation is reliable domestic sourcing — the SS42H11-G9 used in V1.2 is only available from AliExpress with unpredictable lead times.
+
+**What changed:**
+
+| | V1.2 | V1.3 |
+|--|------|------|
+| Switch part | SS42H11-G9 (AliExpress) | SSSU042100 (Mouser 688-SSSU042100) |
+| Row spacing | 4.0mm | 2.5mm |
+| Pad drill | 1.1mm | 0.7mm |
+| Mounting | 4 metal lugs to snip before soldering | Metal snap-in clips seat into 2 NPTH slots (1.5mm × 1.5mm) in the PCB — no prep required |
+| Schematic | unchanged | unchanged |
+| Electrical behavior | baseline | identical |
+
+The SSSU042100 is electrically pin-compatible with the SS42H11-G9 — same 4PDT function, same 12-pin layout, same 3mm pitch. No schematic changes. The only differences are physical: smaller pin diameter (0.7mm vs 1.1mm), tighter row spacing (2.5mm vs 4.0mm), and a snap-in mounting mechanism that eliminates the lug-snipping step required on V1.2.
+
+**V1.3 Files:**
+
+| File | Description |
+|------|-------------|
+| [v1.3/Batman_Forever_JAMMA_Adapter_V1.3.eprj](v1.3/Batman_Forever_JAMMA_Adapter_V1.3.eprj) | EasyEDA Pro project file |
+| [v1.3/assembly-guide.md](v1.3/assembly-guide.md) | Assembly guide |
+| [v1.3/bom.md](v1.3/bom.md) | Bill of materials with full pricing |
+
+Gerbers have not been generated for V1.3 yet.
+
+---
+
+## Shared Documentation
 
 | Document | Description |
 |----------|-------------|
-| [Assembly Guide](docs/assembly-guide.md) | Component placement, soldering notes, switch settings, testing |
 | [Cable Build Guide](docs/cable-builds.md) | Power cable and speaker cable pinouts, crimping, safety |
-| [Bill of Materials](docs/bom.md) | Complete shopping list with part numbers and sources |
 | [Ordering Guide](docs/ordering-guide.md) | JLCPCB order settings and Gerber export instructions |
+
+---
 
 ## Repository Structure
 
 ```
-Batman_Forever_JAMMA_Adapter_V1.2.eprj   EasyEDA Pro project file (final design)
-Gerber_PCB2_2026-03-20.zip               Production Gerber files for JLCPCB
-docs/                                    Assembly guide, cable builds, BOM, ordering guide
-bom/                                     Detailed BOM with full vendor pricing
-soundboard_mounting_kit.scad/.stl        3D-printable mounting parts
+v1.2/                                    V1.2 — tested production version
+  Batman_Forever_JAMMA_Adapter_V1.2.eprj   EasyEDA Pro project file
+  Gerber_PCB2_2026-03-20.zip               Production Gerbers for JLCPCB
+  assembly-guide.md                        Assembly guide
+  bom.md                                   Bill of materials
+
+v1.3/                                    V1.3 — design complete, NOT TESTED
+  Batman_Forever_JAMMA_Adapter_V1.3.eprj   EasyEDA Pro project file
+  assembly-guide.md                        Assembly guide
+  bom.md                                   Bill of materials
+
+docs/                                    Shared documentation
+  cable-builds.md                          Power and speaker cable builds
+  ordering-guide.md                        JLCPCB order settings
+  images/                                  Board photos
+
+soundboard_mounting_kit.scad/.stl        3D-printable sound board mounting parts
 ```
+
+---
 
 ## 3D-Printable Sound Board Mounting Kit
 
@@ -77,6 +142,8 @@ The sound board mounts above the ST-V motherboard on standoffs, but the mounting
 
 All parts are 3mm thick (except the L-bracket pillar). M3 hardware throughout. Print in PETG or PLA, no supports needed. The OpenSCAD source (`soundboard_mounting_kit.scad`) is included if you need to adjust offsets.
 
+---
+
 ## Stereo-to-Mono Downmixing
 
 The Batman Forever sound board outputs amplified stereo via a bridged (BTL) amplifier — four wires: L+, L-, R+, R-. JAMMA only has a single speaker output (Speaker+, Speaker-).
@@ -88,6 +155,8 @@ SW4 (4PDT slide switch) handles this with direct BTL parallel summing: in Batman
 In ST-V mode, SW4 simply passes the native JAMMA audio straight through to the cabinet.
 
 The line-level audio path (RV1, RCA jacks, pin headers) is completely independent and always active regardless of SW4 position.
+
+---
 
 ## Switch Settings
 
@@ -108,6 +177,8 @@ The line-level audio path (RV1, RCA jacks, pin headers) is completely independen
 |----------|------|
 | Left | Displays 5V rail |
 | Right | Displays 12V rail |
+
+---
 
 ## Credits
 
