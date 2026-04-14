@@ -97,9 +97,9 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 
 | Ref | Qty | Description | Mfr Part # | Mouser Part # | Price | Ext | Notes |
 |-----|-----|-------------|-----------|---------------|-------|-----|-------|
-| SW1, SW2, SW4 | 3 | Alps Alpine 4PDT slide switch, 12-pin, vertical, 3mm pitch | SSSU042100 | 688-SSSU042100 | $2.36 | $7.08 | No lug prep needed — plastic snap-in legs, not solderable. |
+| SW1, SW2, SW4 | 3 | Alps Alpine 4PDT slide switch, 12-pin, vertical, 3mm pitch | SSSU042100 | 688-SSSU042100 | $2.36 | $7.08 | No lug prep needed — metal snap-in clips seat into PCB NPTH holes. Only 12 signal pins solder. |
 
-**Note:** SSSU042100 uses plastic snap-in retention clips (not solderable). Only the 12 signal pins solder. No lug snipping required.
+**Note:** SSSU042100 uses metal snap-in retention clips that seat into dedicated PCB NPTH holes. Only the 12 signal pins solder. No lug snipping required.
 
 ---
 
@@ -161,7 +161,7 @@ J9/J10 use Molex KK .100" (2.54mm) — different series from .156" power/speaker
 
 ## Notes
 
-1. **V1.3 switch change:** SW1/SW2/SW4 are now Alps SSSU042100 (Mouser 688-SSSU042100) instead of SS42H11-G9 (AliExpress). Same 3mm pitch, same 12-pin layout, same electrical behavior. No schematic changes. No lug prep required.
+1. **V1.3 switch change:** SW1/SW2/SW4 are now Alps SSSU042100 (Mouser 688-SSSU042100) instead of SS42H11-G9 (AliExpress). Same 3mm pitch, same 12-pin layout, same electrical behavior. No schematic changes. No lug prep required. Footprint adds 2 NPTH holes (ø1.5mm) for the metal snap-in retention clips.
 2. **V1.2 adds 4 resistors** (R1-R4, 0.22 ohm ballast for BTL audio summing). No capacitors. All other routing is direct wire.
 3. **All through-hole** — no SMD. Hand solder everything.
 4. **RCA jacks (Kycon KLPX-0848A-2) mount on the BOTTOM layer.** True 2-pin design (1 GND + 1 signal). Flush-cut J7/J8 pins on top for RV1 clearance.

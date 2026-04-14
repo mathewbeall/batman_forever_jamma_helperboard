@@ -1,7 +1,7 @@
 # Batman Forever JAMMA Adapter — Assembly Guide
 
 **Board Version:** V1.3
-**V1.3 change:** SW1/SW2/SW4 are Alps SSSU042100 (Mouser). No lug prep required — plastic snap-in retention clips, not solderable metal tabs.
+**V1.3 change:** SW1/SW2/SW4 are Alps SSSU042100 (Mouser). No lug prep required — metal snap-in retention clips seat into dedicated PCB holes. Only the 12 signal pins solder.
 **All components are through-hole. No SMD. Four resistors (R1-R4) are the only passives.**
 
 ---
@@ -20,7 +20,7 @@
 
 - Inspect the bare PCB for manufacturing defects, especially the gold finger edge and via fills.
 - Gather all components and verify against the [Bill of Materials](../bom/batman-forever-bom-v1.3.md).
-- **No switch prep needed** — the SSSU042100 uses plastic snap-in retention clips that are not solderable. Just insert and solder the 12 signal pins. Orientation does not matter — the switches are electrically symmetric.
+- **No switch prep needed** — the SSSU042100 uses metal snap-in retention clips that seat into dedicated PCB holes. Just press the switch in until the clips snap through, then solder the 12 signal pins. Orientation does not matter — the switches are electrically symmetric.
 
 ---
 
@@ -86,7 +86,7 @@ Solder the four 0.22 ohm 1W axial resistors (TE RR01JR22TB) above and below the 
 
 Solder the Alps SSSU042100 4PDT slide switch. Silkscreen labels read "ST-V" and "Batman".
 
-- Insert the switch — the plastic snap-in legs click into the PCB, no lug snipping required.
+- Press the switch into the PCB — the metal snap-in clips pass through the dedicated NPTH holes and lock. No lug snipping required.
 - Orientation does not matter — switches are electrically symmetric.
 - ST-V (up, toward keyed JAMMA edge) / Batman (down, away from keyed JAMMA edge).
 
