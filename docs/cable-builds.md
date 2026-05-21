@@ -60,15 +60,19 @@ These connect the sound board's RCA line-level outputs to the adapter's INPUT he
 
 ### Sound Board RCA Jacks
 
-| Jack | Color | Function |
-|------|-------|----------|
-| J14 | Red | Line-level output — Right |
-| J13 | White | Line-level output — Left |
-| J11 | Red | Mix-in input — Right |
-| J10 | White | Mix-in input — Left |
-| — | Black | Combined mono output |
+Five RCA jacks on the right edge of the sound board, top to bottom:
 
-Connect J14 (red) and J13 (white) to the adapter's INPUT header.
+| Position | Jack | Function |
+|----------|------|----------|
+| 1 (top) | J12 | Unamplified combined mono output (for external amp) |
+| 2 | J13 | Line-level output — Left channel |
+| 3 | J14 | Line-level output — Right channel |
+| 4 | J10 | Mix-in input — Left channel |
+| 5 (bottom) | J11 | Mix-in input — Right channel |
+
+Source: Mitsurugi-w's resources thread, image `bat_rca2.jpg`.
+
+Connect J13 (Left) and J14 (Right) to the adapter's INPUT header.
 
 ### Parts
 
